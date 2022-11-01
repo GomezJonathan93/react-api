@@ -16,21 +16,10 @@ const NavBar = () =>{
             </div> */}
             <nav className="navBar">
                 <ul className="ulNav">
-                    <li>
-                        {/* <a href="#">Eloboost</a> */}
                         <Link to='/Eloboost'>Eloboost</Link>
-                    </li>
-                    <li>
-                        {/* <a href="#">Coaching</a> */}
                         <Link to='/Coaching'>Coaching</Link>
-                    </li>
-                    <li>
-                        {/* <a href="#">Merchandising</a> */}
                         <Link to='/Merchandising'>Merchandising</Link>
-                    </li>
-                    <li>
                         <CartWidget />
-                    </li>
                 </ul>
             </nav>
             </header>

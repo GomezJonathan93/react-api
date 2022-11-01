@@ -5,7 +5,7 @@ import Eloboost from './Eloboost';
 import Coaching from './Coaching';
 import CartWidget from './cartwidget';
 import Merchandising from './Merchandising'
-import ItemListContainer from './itemlistcontainer';
+import ItemListContainer from './ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer';
 
 const Main =() =>{
