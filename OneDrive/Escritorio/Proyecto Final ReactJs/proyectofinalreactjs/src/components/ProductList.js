@@ -1,8 +1,4 @@
-import React from "react";
-
-const ProductList = () =>{
-    //arrays de objetos merch
-const products = [
+export const products = [
     {
         id: 1,
         modelo:"Yuumi Abeja",
@@ -93,9 +89,3 @@ const products = [
         category: "figuras"
     }
 ]
-    return(
-        console.log("hola")
-    )
-}
-
-export default ProductList

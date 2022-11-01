@@ -1,36 +1,36 @@
 import React from "react";
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import ProductList from "./ProductList";
 
-const ItemListContainer =() =>{
+const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    console.log(items)
+    console.log(items);
 
-    const { categoryName } = useParams() 
-    console.log(categoryName)
+    const { categoryName } = useParams();
+    console.log(categoryName);
 
     useEffect(() => {
-
-        const getProducts = ()=>{
-            return new Promise((res, rej) =>{
-                const prodFiltrados = {ProductList}.filter((prod)=>prod.category === categoryName)
-                const ref = categoryName ? prodFiltrados : {ProductList};
-                setTimeout(()=>{
+        const getProducts = () => {
+            return new Promise((res, rej) => {
+                const prodFiltrados = ProductList.filter(
+                    (prod) => prod.category === categoryName
+                );
+                const ref = categoryName ? prodFiltrados : ProductList;
+                setTimeout(() => {
                     res(ref);
-                },2000);
+                }, 2000);
             });
-    };
-    getProducts()
-        .then((res) =>{
-            setItems(res);
-        })
-        .catch((error) =>{
-            console.log(error)
-        });
-    
-    }, [categoryName]);
+        };
+        getProducts()
+            .then((res) => {
+                setItems(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, [categoryName])
     
     return(
         <div>

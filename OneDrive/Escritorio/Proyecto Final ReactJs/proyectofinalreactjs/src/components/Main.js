@@ -12,7 +12,7 @@ const Main =() =>{
     return(
         <main>
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route path='/' element={<ItemListContainer/>}/>
                 
                 <Route path="/eloboost" element={<Eloboost/>}/>
 
