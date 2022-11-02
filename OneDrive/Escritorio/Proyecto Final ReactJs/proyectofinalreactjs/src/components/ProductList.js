@@ -5,7 +5,7 @@ export const products = [
         tamaño:"medium",
         precio: 850,
         stock: 50,
-        img:"images/Almohadones/yuumibee.png",
+        img:"/images/Almohadones/yuumibee.png",
         category: "almohadores"
     },
     {

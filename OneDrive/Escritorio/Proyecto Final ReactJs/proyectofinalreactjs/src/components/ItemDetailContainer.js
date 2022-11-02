@@ -1,23 +1,24 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "./ItemList";
+//import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail"
 import { products } from "./ProductList";
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
     const [items, setItems] = useState([]);
-    console.log(items);
+    //console.log(items);
 
-    const { categoryName } = useParams();
-    console.log(categoryName);
+    const { id } = useParams();
+    //console.log(categoryName);
 
     useEffect(() => {
         const getProducts = () => {
             return new Promise((res, rej) => {
-                const prodFiltrados = products.filter(
-                    (prod) => prod.category === categoryName
+              const productoFiltrado = products.find(
+                    (prod) => prod.id === id
                 );
-                const ref = categoryName ? prodFiltrados : products;
+                const ref = productoFiltrado;
                 setTimeout(() => {
                     res(ref);
                 }, 2000);
@@ -30,7 +31,7 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }, [categoryName]);
+    }, [id]);
 
     return (
         <div>
@@ -38,10 +39,10 @@ const ItemListContainer = () => {
             {items.length == 0 ? (
                 <h1>Cargando...</h1>
             ) : (
-                <ItemList items={items} />
+                <ItemDetail items={items} />
             )}
         </div>
     );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

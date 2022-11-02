@@ -1,9 +1,17 @@
 import React from "react";
+import Item from "./Item";
 
-const ItemList = () =>{
-    return(
-        console.log("hola")
+const ItemList = ({items}) => {
+    return (
+        <section className="products">
+            {
+                items.map((item)=>{
+                    return <Item key={item.id} {...item}/>
+                })
+            }
+        </section>
     )
+    
 }
 
 export default ItemList
