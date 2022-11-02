@@ -6,10 +6,10 @@ import { products } from "./ProductList";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    console.log(items);
+    //console.log(items);
 
     const { categoryName } = useParams();
-    console.log(categoryName);
+    //console.log(categoryName);
 
     useEffect(() => {
         const getProducts = () => {

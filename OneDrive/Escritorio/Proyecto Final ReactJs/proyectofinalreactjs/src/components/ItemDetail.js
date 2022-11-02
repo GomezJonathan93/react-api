@@ -1,14 +1,13 @@
 import React from "react";
-//import ItemDetailContainer from "./ItemDetailContainer";
 
-const ItemDetail =(modelo, img, precio, id, descripcion) =>{
+const ItemDetail =({Items}) =>{
     return(
         <div>
-            <h2>{modelo} - ${precio}</h2>
+            <h2>{Items.modelo} - ${Items.precio}</h2>
             <div className="detailFlex">
-                <img src={img} alt={modelo} />
+                <img src={Items.img} alt={Items.modelo} />
                 <div>
-                    <p>{descripcion}</p>
+                    <p>{Items.descripcion}</p>
                 </div>
             </div>
         </div>
