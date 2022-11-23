@@ -6,7 +6,7 @@ export const products = [
         precio: 850,
         stock: 50,
         img:"/images/Almohadones/yuumibee.png",
-        category: "almohadores"
+        category: "almohadones"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const products = [
         precio: 360,
         stock: 10,
         img: "/images/Almohadones/yuumigap.png",
-        category: "almohadores"
+        category: "almohadones"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const products = [
         precio: 680,
         stock: 150,
         img: "/images/Almohadones/yuumioriginal.png",
-        category: "almohadores"
+        category: "almohadones"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const products = [
         precio: 1100,
         stock: 150,
         img: "/images/Almohadones/yuumipink.png",
-        category: "almohadores"
+        category: "almohadones"
     },
 
     {

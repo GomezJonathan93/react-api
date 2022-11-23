@@ -2,40 +2,48 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import { products } from "./ProductList";
+import { db } from "./firebase";
+import { collection , where , query , getDocs } from "firebase/firestore"
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
-    //console.log(items);
-
-    const { categoryName } = useParams();
-    //console.log(categoryName);
+    const [items, setItems] = useState([])
+    const { categoryName } = useParams()
 
     useEffect(() => {
-        const getProducts = () => {
-            return new Promise((res, rej) => {
-                const prodFiltrados = products.filter(
-                    (prod) => prod.category === categoryName
-                );
-                const ref = categoryName ? prodFiltrados : products;
-                setTimeout(() => {
-                    res(ref);
-                }, 2000);
-            });
-        };
-        getProducts()
-            .then((res) => {
-                setItems(res);
+
+        const ItemsCollection = collection( db , "Item" )
+
+        if (categoryName) {
+            const filtro = query(ItemsCollection,where("category","===",categoryName))
+            const consulta = getDocs(filtro)
+
+            consulta
+            .then((resultado)=>{
+                const Items = resultado.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+                 setItems(Items)
             })
             .catch((error) => {
-                console.log(error);
-            });
-    }, [categoryName]);
+                console.log(error)
+            })
+        } else {
+            const consulta = getDocs(ItemsCollection)
+
+            consulta
+                .then((resultado) => {
+
+                    const Items = resultado.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+                    setItems(Items)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+    }, [categoryName])
 
     return (
         <div>
             <h2>Productos</h2>
-            {items.length == 0 ? (
+            {items.length === 0 ? (
                 <h1>Cargando...</h1>
             ) : (
                 <ItemList items={items} />
