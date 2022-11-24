@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom"
 import Main from './Main'
 import Footer from "./Footer";
 import CustomProvider from "./CustomProvider"
-//import { app, db } from "./firebase"
 
 const App = () =>{
     return(

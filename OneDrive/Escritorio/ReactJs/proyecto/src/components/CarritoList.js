@@ -1,16 +1,17 @@
 import React from "react";
-import AlmohadonesItem from "./AlmohadonesItem";
+import CarritoItem from "./CarritoItem";
 
-const Almohadones = ({items}) => {
+const CarritoList = ({items}) => {
     return (
         <section className="products">
             {
                 items.map((item)=>{
-                    return <AlmohadonesItem key={item.id} {...item}/>
+                    return <CarritoItem key={item.id} {...item}/>
                 })
             }
         </section>
     )
+    
 }
 
-export default Almohadones
+export default CarritoList

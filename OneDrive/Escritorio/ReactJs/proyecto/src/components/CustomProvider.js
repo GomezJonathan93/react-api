@@ -10,7 +10,7 @@ export const useCarrito = () => {
 const CustomProvider = ({children}) => {
     
 
-    const [carrito, setCarrito] = useState([]) //array del carrito de compras
+    const [carrito, setCarrito] = useState([])
     const [valorTotal, setTotal] = useState(0)
     const [cantidadTotal, setCantidadTotal] = useState(0)
 
@@ -21,7 +21,6 @@ const CustomProvider = ({children}) => {
 
     const agregarProducto = (items, cantidad) => {
         if (isInCart.inCart) {
-            //Sumo la cantidad
         } else {
             console.log(items)
             console.log(cantidad)

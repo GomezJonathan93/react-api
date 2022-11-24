@@ -3,12 +3,9 @@ import { useContext } from "react"
 import { useRef, useState } from "react"
 import { contexto } from "./CustomProvider"
 import { db } from "./firebase"
-import ItemList from './ItemList'
-
+import CarritoList from './CarritoList'
 
 const Carrito = () => {
-
-    
 
     const valorDelContexto = useContext(contexto);
     const refName = useRef()
@@ -47,7 +44,9 @@ const Carrito = () => {
 
     return (
         <div>
-            <p>Hola, soy un carrito</p>
+            <p>Precio total a pagar: ${valorDelContexto.precioFinal}</p>
+            <p>Unidades totales a comprar: {valorDelContexto.cantidadTotal}</p>
+            <CarritoList items={items}/>
             {id ? <h1>Orden generada con exito, su id es {id}</h1> : null}
             <form onSubmit={handleSubmit}>
                 <div>
@@ -57,8 +56,7 @@ const Carrito = () => {
                 <div>
                     <input ref={refAge} type="text" />
                 </div>
-                <button >guardar</button>
-                <ItemList items={items}/>
+                <button >Confirmar Compra</button>
             </form>
         </div>
     )

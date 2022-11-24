@@ -1,18 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail"
+import RemerasDetail from "./RemerasDetail"
 import { db } from "./firebase"
 import { collection, doc, getDoc } from "firebase/firestore"
 
-const ItemDetailContainer = () => {
+const RemerasDetailContainer = () => {
     
     const [item, setItem] = useState({})
     const { id } = useParams()
 
     useEffect(()=>{
         
-        const ItemCollection = collection(db, "Item")
+        const ItemCollection = collection(db, "remeras")
         const refe = doc(ItemCollection,id) 
         const consulta = getDoc(refe)
 
@@ -31,11 +31,11 @@ const ItemDetailContainer = () => {
             {! item  ? (
                 <h1>Cargando...</h1>
             ) : (
-                <ItemDetail items={item} />
+                <RemerasDetail items={item} />
             )}
 
         </div>
     );
 };
 
-export default ItemDetailContainer;
+export default RemerasDetailContainer;

@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import { useCarrito } from "./CustomProvider"
 
-const ItemDetail =({items}) =>{
+const RemerasDetail =({items}) =>{
 
     const { agregarProducto } = useCarrito()
 
@@ -24,4 +24,4 @@ const ItemDetail =({items}) =>{
     )
 }
 
-export default ItemDetail
+export default RemerasDetail

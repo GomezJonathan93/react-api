@@ -7,11 +7,11 @@ const NavBar = () =>{
         <header>
             <nav className="navBar">
                 <ul className="ulNav">
-                        <Link to='/Remeras'>Remeras</Link>
-                        <Link to='/Almohadones'>Almohadones</Link>
-                        <Link to='/Figuras'>Figuras</Link>
-                        <Link to='/Merchandising'>Merchandising</Link>
-                        <CartWidget />
+                    <Link to='/Merchandising'>Todos los Productos</Link>
+                    <Link to='/Remeras'>Remeras</Link>
+                    <Link to='/Almohadones'>Almohadones</Link>
+                    <Link to='/Figuras'>Figuras</Link>
+                    <CartWidget />
                 </ul>
             </nav>
             </header>

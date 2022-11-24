@@ -1,8 +1,15 @@
 import React from 'react';
+import RemerasItem from "./RemerasItem";
 
-const Remeras = () =>{
+const Remeras = ({items}) =>{
     return(
-        <p>Hola, soy un Remeras</p>
+        <section className="products">
+            {
+                items.map((item)=>{
+                    return <RemerasItem key={item.id} {...item}/>
+                })
+            }
+        </section>
     )
 }
 
