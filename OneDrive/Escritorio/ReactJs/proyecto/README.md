@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Proyecto ReactJS - Jonathan Gómez
+###### Comisión 34790
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+##### Sobre mí:
+Mi nombre es Jonathan Gómez y actualmente tengo 28 años. Yo siempre me he centrado en RRHH como área de estudio y trabajo pero decidí a principio de este año (2022) redirigir mi desarrollo profesional hacia la programación, con un especial interés en el front. Comencé con Desarrollo Web, luego Javascript y ahora ReactJS, convirtiéndose éste en un desafío enorme porque, como todo lo que he aprendido este año, no tiene absolutamente nada que ver con lo que he ido aprendiendo toda mi vida, así que hacer esto ha sido un año de lo más desafiante pero a la vez apasionante.
 
-In the project directory, you can run:
+##### Sobre la App
+El proyecto se basa en un e-commerce orientado a productos de Yuumi, un personaje del videojuego League Of Legends. El mismo cuenta con secciones, en este caso:
+1. Remeras
+1. Almohadones
+1. Figuras
+1. Todos los Productos
 
-### `npm start`
+Así mismo, la sección "Todos los Productos" por agilidad en términos de maquetación se ha dejado también como Home.
+Lo que busca la App es recrear un proceso de compra en el cual el usuario verá los productos como un todo o filtrados según la sección de interés, la posibilidad de entrar al detalle de cada uno, agregarlo al carrito y efectuar la compra, enviando a la base de datos (en este caso Firebase) información que se guardará en la colección "orders".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##### Utilizado en la App
+1. [Create-React-App](https://github.com/facebook/create-react-app)
+1. [Browser Router](https://v5.reactrouter.com/web/guides/quick-start)
+1. [Firebase](https://firebase.google.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Instalación/Uso
+Para utilizarla, primero deberás descargar los archivos desde el [repositorio](https://github.com/GomezJonathan93/proyectoreactuno/tree/master/OneDrive/Escritorio/ReactJs/proyecto). Una vez obtenido el mismo, en el CMD deberá pararse sobre la carpeta haciendo lo siguiente:
+```
+:/> cd "nombre de la carpeta"
+Ya parado sobre ella, habrá que instalar los recursos mencionados más arriba. 
+En orden demención, será:
+:/> npm i browser-router
+:/> npm i firebase
+Cuando ambas se hayan instalado exitosamente, ya podremos levantar la app con
+normalidad. Utilizaremos:
+:/> npm start
+```
+# Tecnologías usadas
+1. HTML 5
+2. CSS 3
+3. JavaScript ES6
 
-### `npm test`
+No se utilizó ninguna librería de estilos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# GIF/Video
+![Gif Funcionalidad](https://i.ibb.co/n0KSwn5/proyecto-funcionando.gif)
+###### En caso de problemas de visualización del mismo, entrar a [este link](https://ibb.co/CtSFwMT)
