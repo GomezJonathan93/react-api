@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
+body{
+    background-color: black;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+}
+Main{
+    padding: 1rem;
+}
+/*Header*/
+header{
+    color: white;
+    background-color: #8F00FF;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+header h1{
+    font-family: 'Dancing Script', cursive;
+}
+header a{
+    text-decoration: none;
+}
+/*navbar*/
+nav .ulNav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+nav ul a{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+nav ul .ulNavLink:hover {
+  box-shadow: inset 150px 0 0 0 #ffff;
+  color: #8F00FF;
+}
+/*Home*/
+.portada{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+}
+.textoPortada h2{
+    color: #8F00FF;
+    font-size: 2.5rem;
+}
+.textoPortada .primerP{
+    padding-top: 4rem;
+}
+.textoPortada p{
+    font-size: 1.5rem;
+}
+.textoPortada span{
+    color: #8F00FF;
+    font-family:'Dancing Script', cursive; ;
+    font-size: 2rem;
+}
+/*Productos.jsx*/
+.containerProductos{
+    padding-bottom: 4rem;
+}
+.h3Productos{
+    text-align: center;
+    color: #8F00FF;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+.pProductos{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding-bottom: 1rem;
+}
+.pProductos span{
+    color: #8F00FF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+.preview-cards {
+    display: flex;
+    justify-content: center;
+}
+.preview-cards a {
+    margin: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.preview-cards img {
+    height: 250px;
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #8F00FF;
+    transition: all 0.3s ease;
+}
+.preview-cards img:hover {
+    box-shadow: 0px 0px 25px #8F00FF;
+    transform: scale(1.02);
+}
+/*ItemListContainer.jsx*/
+.containerListContainer{
+    min-height: 100vh;
+}
+.productosTitulo{
+    text-align: center;
+    font-family:'Dancing Script', cursive ;
+    color: #8F00FF;
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+.productosP{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+/*item.jsx*/
+.cardArticle {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+.cardArticle:hover {
+    transform: scale(1.02);
+}
+.cardTitulo{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #8F00FF;
+}
+.cardImg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+.cardBoton {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    background-color: #8F00FF;
+    cursor: pointer;
+    color: black;
+}
+.cardBoton a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+/*itemDetail.jsx*/
+.cardDetail{
+    margin-top: 2rem;
+}
+.detailTitulo span{
+    color: #8F00FF;
+    font-size: 2rem;
+}
+.detailFlex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.detailFlex img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem 0.5rem;
+    padding: 1rem 0;
+}
+/*ItemCount.jsx*/
+.countP{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.counterActions{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.counterActions button{
+    font-size: 2rem;
+    background-color: #0000;
+    transition: all 0.3s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: none;
+}
+.countActionContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+.countAction{
+	box-shadow: 2px 3px 6px 0px #8F00FF;
+	background-color:#8F00FF;
+	border-radius:28px;
+	border:1px solid #8F00FF;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #8F00FF;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+/*CarritoItem.jsx*/
+.carritoCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+.carritoTitulo{
+    text-align: center;
+    color: #8F00FF;
+}
+.carritoCard img{
+    width: 250px;
+    height: 250px;
+}
+/*CarritoList.jsx*/
+.carritoListProducts {
+    display: flex;
+    justify-content: flex-start;
+}
+/*Carrito.jsx*/
+.carritoContainer{
+    min-height: 100vh;
+}
+.carritoP{
+    font-size: 1.5rem;
+}
+.carritoP span{
+    color: #8F00FF;
+}
+.carritoBoton{
+    text-align: center;
+}
+.buttonComprar{
+    box-shadow: 2px 3px 6px 0px #8F00FF;
+	background-color:#8F00FF;
+	border-radius:28px;
+	border:1px solid #8F00FF;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.6rem;
+	font-weight:bold;
+	padding:16px 150px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #8F00FF;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.custom-alerta{
+    color: #ffff;
+}
+.custom-alerta a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5rem;
+}
+/*Footer.jsx*/
+footer {
+    background-color: #8F00FF;
+    padding: 0.3rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.redesFooter, .linksFooter, .marcaFooter{
+    display: flex;
+    flex-direction: column;
+}
+.redesFooter a, .linksFooter a{
+    text-decoration: none;
+    list-style: none;
+}
+.marcaFooter h5{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+.linksFooter h5{
+    font-size: 1.2rem;
+}
+/*sobreMi,jsx*/
+.cvContainer{
+    margin: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    height: 250vh;
+}
+.titulo{
+    text-align: center;
+    color: #8F00FF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+.foto{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+}
+.tecnologiasContainer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+hr{
+    border: 1px solid #8F00FF;
+}
+.tecnologiasLogoContainer{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cvCuerpoFoto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.cvCuerpoFoto i{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.cvCuerpo p{
+    color: #8F00FF;
+    font-size: 1.3rem;
+}
+.cvCuerpo span{
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+}
+.cvCuerpo span a{
+    text-decoration: none;
+}
+.datosContainer{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.educacionRelevante{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.educacionRelevante ul{
+    margin-top: 1rem;
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.educacionRelevante li{
+    color: #8F00FF;
+    padding-bottom: 1rem;
+}
+.diploma2{
+    margin-top: 1rem;
+    width: 450px;
+    height: 350px;
+}
+.diploma{
+    width: 350px;
+    height: 250px;
+}
+.experienciaContainer{
+    margin-top: 1rem;
+}
+.experienciaContainer p{
+    color: #ffff;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
